@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Product";
+}
+
+<div class="hero-section text-center text-white py-5" style="background: linear-gradient(90deg, #4b0082, #8b00ff);">
+    <h1 class="display-4">Pizza Details</h1>
+    <p class="lead">Indulge in our exquisite pizza selection</p>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <!-- Product Details -->
+        <div class="col-md-6">
+            <div class="card shadow" style="background: linear-gradient(135deg, #4b0082, #8b00ff);">
+                <img src="https://via.placeholder.com/500" class="card-img-top" alt="Margherita Pizza">
+                <div class="card-body text-white">
+                    <h5 class="card-title">Margherita Pizza</h5>
+                    <p class="card-text">A classic delight with rich tomato sauce and mozzarella cheese. Perfect for every occasion!</p>
+                    <p class="price">$12.99</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add to Cart Section -->
+        <div class="col-md-6">
+            <div class="card shadow" style="background: linear-gradient(135deg, #4b0082, #8b00ff);">
+                <div class="card-body text-white">
+                    <h5 class="card-title">Customize Your Order</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="size" class="form-label">Size</label>
+                            <select class="form-select" id="size" required>
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="toppings" class="form-label">Toppings</label>
+                            <select class="form-select" id="toppings" multiple required>
+                                <option value="pepperoni">Pepperoni</option>
+                                <option value="mushrooms">Mushrooms</option>
+                                <option value="onions">Onions</option>
+                                <option value="olives">Olives</option>
+                                <option value="extra_cheese">Extra Cheese</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="crust" class="form-label">Crust</label>
+                            <select class="form-select" id="crust" required>
+                                <option value="thin">Thin Crust</option>
+                                <option value="regular">Regular Crust</option>
+                                <option value="stuffed">Stuffed Crust</option>
+                            </select>
+                        </div>
+
+                        <form method="post">
+                            <!-- Add your product form fields here -->
+                            <button type="submit" style="color:white" class="btn btn-outline-light w-100" asp-action="Cart">Add to Cart</button>
+                        </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

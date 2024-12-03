@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Cart";
+}
+
+<div class="hero-section text-center text-white py-5" style="background: linear-gradient(90deg, #4b0082, #8b00ff);">
+    <h1 class="display-4">Your Cart</h1>
+    <p class="lead">Review your order before proceeding to checkout</p>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow" style="background: linear-gradient(135deg, #4b0082, #8b00ff);">
+                <div class="card-body text-white">
+                    <h5 class="card-title">Your Order</h5>
+                    <table class="table table-striped text-white">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Size</th>
+                                <th scope="col">Toppings</th>
+                                <th scope="col">Crust</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Cart Item 1 -->
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Margherita Pizza</td>
+                                <td>Medium</td>
+                                <td>Pepperoni, Olives</td>
+                                <td>Thin Crust</td>
+                                <td>
+                                    <input type="number" class="form-control w-50" value="2" min="1">
+                                </td>
+                                <td>$25.98</td>
+                                <td>
+                                    <button class="btn btn-danger btn-sm">Remove</button>
+                                </td>
+                            </tr>
+                            <!-- Cart Item 2 -->
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Veggie Supreme</td>
+                                <td>Large</td>
+                                <td>Mushrooms, Onions</td>
+                                <td>Regular Crust</td>
+                                <td>
+                                    <input type="number" class="form-control w-50" value="1" min="1">
+                                </td>
+                                <td>$15.99</td>
+                                <td>
+                                    <button class="btn btn-danger btn-sm">Remove</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-between">
+                        <h5>Total: $41.97</h5>
+                        <button class="btn btn-outline-light">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
