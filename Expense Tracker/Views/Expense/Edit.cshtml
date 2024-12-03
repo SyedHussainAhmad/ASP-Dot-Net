@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Edit Expense";
+}
+
+<div class="container mt-5">
+    <h1 class="text-gradient text-center mb-5">Edit Expense</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card card-hover shadow-lg p-4">
+                <form method="post">
+                    <div class="form-group mb-3">
+                        <label for="name" class="text-light">Expense Name</label>
+                        <input type="text" class="form-control" id="name" name="name" value="@Model.Name" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="amount" class="text-light">Amount</label>
+                        <input type="number" class="form-control" id="amount" name="amount" value="@Model.Amount" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="category" class="text-light">Category</label>
+                        <select class="form-control" id="category" name="category">
+@*                             <option value="Food" @(Model.Category == "Food" ? "selected" : "")>Food</option>
+                            <option value="Entertainment" @(Model.Category == "Entertainment" ? "selected" : "")>Entertainment</option>
+                            <option value="Utilities" @(Model.Category == "Utilities" ? "selected" : "")>Utilities</option>
+                            <option value="Travel" @(Model.Category == "Travel" ? "selected" : "")>Travel</option> *@
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="date" class="text-light">Date</label>
+                        <input type="date" class="form-control" id="date" name="date" value="@Model.Date.ToString("yyyy-MM-dd")" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-gradient btn-block">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

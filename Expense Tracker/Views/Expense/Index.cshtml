@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Expenses List";
+}
+
+<div class="container mt-5">
+    <h1 class="text-gradient text-center mb-5">Your Expenses</h1>
+
+    <div class="row">
+        <div class="col-md-12 text-right mb-4">
+            <a href="/Expense/Add" class="btn btn-gradient">Add New Expense</a>
+        </div>
+    </div>
+
+    <table class="table table-striped text-light">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through expenses here (Assuming you pass a list of expenses from the controller) -->
+            @foreach (var expense in Model.Expenses)
+            {
+                <tr>
+                    <td>@expense.Name</td>
+                    <td>@expense.Amount</td>
+                    <td>@expense.Category</td>
+                    <td>@expense.Date.ToString("MM/dd/yyyy")</td>
+                    <td>
+                        <a href="/Expense/Edit/@expense.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="/Expense/Delete/@expense.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
